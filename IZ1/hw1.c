@@ -120,7 +120,7 @@ char * reading_from_stdin(Buffer *user_buf) {
 			chunk_size = user_buf->curr_size - prev_size;
 		} else {
 			*end = '\0';
-			if (cut_buf(user_buf, end - (char *)user_buf->data) != SUCCESS) {
+			if (cut_buf(user_buf, (end + 1) - (char *)user_buf->data) != SUCCESS) {
 				return NULL;
 			}
 		}
