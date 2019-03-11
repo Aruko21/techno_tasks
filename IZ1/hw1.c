@@ -106,6 +106,14 @@ void print_err (FILE *stream, int code_of_error, const char *func_name) {
 			err_msg = "An invalid pointer was passed";
 			break;
 		}
+		case WRONG_SIZE_CUTTING_ERR: {
+		    err_msg = "Invalid cut buffer size specified";
+		    break;
+		}
+		case REALLOC_CUTTING_ERR: {
+		    err_msg = "Reallocating of memory while cutting failed";
+		    break;
+		}
 		default: {
 			err_msg = "Undefined error";
 			break;
